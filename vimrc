@@ -1,14 +1,18 @@
 " Color
 syntax enable
+colorscheme desert
 
 " Show number and ruler
 set nu
 set ruler
 
+" incremental search
+set incsearch
+
 " Text, tab and ident related
-"set expandtab " spaces instead of tab
 "set smarttab
 
+set expandtab " spaces instead of tab
 set shiftwidth=2 " tab == 2 spaces
 set tabstop=2
 
@@ -19,6 +23,12 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" NERDTree biding key
+nnoremap <silent> <F7> :NERDTreeToggle<cr>
+nmap <S-F7> :NERDTreeClose<CR>
+
+nnoremap <F6> :FufRenewCache<cr>
 
 " Abreviations
 cab W w| cab Q q| cab Wq wq| cab wQ wq| cab WQ wq
@@ -71,7 +81,7 @@ fun! SetupVAM()
 	" let g:vim_addon_manager.debug_activation = 1
 
 	" VAM install location:
-	let vam_install_path = expand('$HOME') . '/Workspace/pleal-vimrc/vam'
+	let vam_install_path = expand('$HOME') . '/Workspace/pleal-vimrc/vam' "TODO if you change of computer change this file
 	if !EnsureVamIsOnDisk(vam_install_path)
 		echohl ErrorMsg | echomsg "No VAM found!" | echohl NONE
 		return
@@ -79,7 +89,7 @@ fun! SetupVAM()
 	exec 'set runtimepath+='.vam_install_path.'/vim-addon-manager'
 
 	" Tell VAM which plugins to fetch & load:
-	call vam#ActivateAddons(['tlib', 'snipmate-snippets', 'github:garbas/vim-snipmate', 'github:claco/jasmine.vim'], {'auto_install' : 0})
+	call vam#ActivateAddons(['tlib', 'snipmate-snippets', 'github:garbas/vim-snipmate', 'github:claco/jasmine.vim', 'The_NERD_tree', 'rails', 'FuzzyFinder', 'github:kchmck/vim-coffee-script'], {'auto_install' : 0})
 	" sample: call vam#ActivateAddons(['pluginA','pluginB', ...], {'auto_install' : 0})
 
 	" Addons are put into vam_install_path/plugin-name directory
@@ -103,3 +113,10 @@ call SetupVAM()
 " option2:  au GUIEnter * call SetupVAM()
 " See BUGS sections below [*]
 " Vim 7.0 users see BUGS section [3]
+"
+"-------
+"To import color syntax
+
+" To use FuzzyFinder
+map <F5> :FufFile **/<CR>
+let g:fuf_file_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|(^|[/\\])(tmp)($|[/\\])'
