@@ -9,6 +9,10 @@ set ruler
 " incremental search
 set incsearch
 
+" highlight search
+set hlsearch
+map <Enter> :nohlsearch <Enter>
+
 " Text, tab and ident related
 "set smarttab
 
@@ -89,7 +93,7 @@ fun! SetupVAM()
 	exec 'set runtimepath+='.vam_install_path.'/vim-addon-manager'
 
 	" Tell VAM which plugins to fetch & load:
-	call vam#ActivateAddons(['tlib', 'snipmate-snippets', 'github:garbas/vim-snipmate', 'github:claco/jasmine.vim', 'The_NERD_tree', 'rails', 'FuzzyFinder', 'github:kchmck/vim-coffee-script'], {'auto_install' : 0})
+	call vam#ActivateAddons(['tlib', 'snipmate-snippets', 'github:garbas/vim-snipmate', 'github:claco/jasmine.vim', 'The_NERD_tree', 'rails', 'FuzzyFinder', 'github:kchmck/vim-coffee-script', 'github:guns/vim-clojure-static'], {'auto_install' : 0})
 	" sample: call vam#ActivateAddons(['pluginA','pluginB', ...], {'auto_install' : 0})
 
 	" Addons are put into vam_install_path/plugin-name directory
