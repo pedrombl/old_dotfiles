@@ -22,6 +22,9 @@ set tabstop=2
 
 set ai "Auto ident
 
+" Set font
+set guifont=Menlo:h18
+
 " Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
