@@ -1,7 +1,12 @@
 " Color
 syntax enable
-colorscheme desert
+if has('gui_running')
+  colorscheme solarized
+else
+  colorscheme slate
+endif
 
+set background=dark
 " Show number and ruler
 set nu
 set ruler
@@ -23,13 +28,16 @@ set tabstop=2
 set ai "Auto ident
 
 " Set font
-set guifont=Menlo:h18
+set guifont=Monaco:h16
 
 " Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" Navigation between files
+nnoremap ,, <c-^>
 
 " NERDTree biding key
 nnoremap <silent> <F7> :NERDTreeToggle<cr>
