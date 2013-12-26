@@ -1,3 +1,6 @@
+" Set leader
+let mapleader = ','
+
 " Color
 syntax enable
 if has('gui_running')
@@ -53,7 +56,15 @@ set noswapfile
 " To always show status line
 set laststatus=2
 
-" call vam#ActivateAddons(['tlib', 'snipmate-snippets', 'github:garbas/vim-snipmate', 'github:claco/jasmine.vim', 'The_NERD_tree', 'rails', 'FuzzyFinder', 'github:kchmck/vim-coffee-script', 'github:guns/vim-clojure-static'], {'auto_install' : 0})
+" source $MYVIMRC reloads the saved $MYVIMRC
+:nmap <Leader>s :source $MYVIMRC<CR>
 
-source vundle.vim
+" opens $MYVIMRC for editing, or use :tabedit $MYVIMRC
+:nmap <Leader>v :e $MYVIMRC<CR>
 
+"set trailing spaces
+:set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+:nmap <Leader>l :set list<CR>
+:nmap <Leader>L :set nolist<CR>
+
+source ~/Workspace/pleal-vimrc/vundle.vim
