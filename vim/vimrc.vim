@@ -67,4 +67,4 @@ set laststatus=2
 :nmap <Leader>l :set list<CR>
 :nmap <Leader>L :set nolist<CR>
 
-source ~/Workspace/pleal-vimrc/vundle.vim
+source %:p:h/vundle.vim
