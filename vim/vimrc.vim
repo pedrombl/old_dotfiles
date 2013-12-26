@@ -57,14 +57,15 @@ set noswapfile
 set laststatus=2
 
 " source $MYVIMRC reloads the saved $MYVIMRC
-:nmap <Leader>s :source $MYVIMRC<CR>
+nmap <Leader>s :source $MYVIMRC<CR>
 
 " opens $MYVIMRC for editing, or use :tabedit $MYVIMRC
-:nmap <Leader>v :e $MYVIMRC<CR>
+nmap <Leader>v :e $MYVIMRC<CR>
 
 "set trailing spaces
-:set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
-:nmap <Leader>l :set list<CR>
-:nmap <Leader>L :set nolist<CR>
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+nmap <Leader>l :let &list = !&list<CR>
 
-source %:p:h/vundle.vim
+
+"Vundle
+source ~/.dotfiles/vim/vundle.vim 

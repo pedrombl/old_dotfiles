@@ -9,7 +9,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My bundles here:
-source %:p:h/vundles.vim
+source ~/.dotfiles/vim/vundles.vim
 
 filetype plugin indent on     " required!
 "
