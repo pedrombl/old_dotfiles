@@ -69,3 +69,5 @@ nmap <Leader>l :let &list = !&list<CR>
 
 "Vundle
 source ~/.dotfiles/vim/vundle.vim 
+
+let g:syntastic_javascript_checkers=['jshint']
