@@ -7,6 +7,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'jpalardy/vim-slime'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
+Bundle 'SyntaxRange'
 
 " for vim-snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -18,5 +19,3 @@ Bundle "honza/vim-snippets"
 Bundle 'elixir-lang/vim-elixir'
 Bundle "claco/jasmine.vim"
 Bundle 'guns/vim-clojure-static'
-
-
