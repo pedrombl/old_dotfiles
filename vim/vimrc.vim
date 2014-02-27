@@ -88,6 +88,7 @@ nmap <Leader>w :call EditFileIfExists(substitute(substitute(@%, 'test\/unit', 'a
 "let @z='@i@pggj50@x'
 
 "Vundle
+"to open this file press gf over the file
 source ~/.dotfiles/vim/vundle.vim 
 
 let g:syntastic_javascript_checkers=['jshint']
