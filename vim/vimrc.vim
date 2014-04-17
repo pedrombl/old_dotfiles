@@ -3,11 +3,8 @@ let mapleader = ','
 
 " Color
 syntax enable
-if has('gui_running')
-  colorscheme solarized
-else
-  colorscheme slate
-endif
+set background=dark
+colorscheme solarized
 
 set background=dark
 " Show number and ruler

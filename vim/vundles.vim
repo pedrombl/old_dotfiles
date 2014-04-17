@@ -9,6 +9,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'SyntaxRange'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'mhinz/vim-startify'
 
 
 " for vim-snipmate
