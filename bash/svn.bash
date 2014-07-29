@@ -10,3 +10,8 @@ function svnshow ()
 {
   svn diff -r $(($1-1)):$1 $2 | vim -R -;
 }
+
+function svndiff ()
+{
+  svn diff | vim -R -;
+}
