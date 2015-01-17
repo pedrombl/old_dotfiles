@@ -5,8 +5,14 @@ let mapleader = ','
 syntax enable
 set background=dark
 colorscheme solarized
-
 set background=dark
+
+" set mouse
+if has('mouse') | set mouse=a | endif
+
+"clipboard
+set clipboard=unnamed
+
 " Show number and ruler
 set nu
 set ruler
@@ -16,7 +22,7 @@ set incsearch
 
 " highlight search
 set hlsearch
-map <Enter> :nohlsearch <Enter>
+map <C-Enter> :nohlsearch <Enter>
 
 " Text, tab and ident related
 "set smarttab
@@ -27,7 +33,7 @@ set tabstop=2
 set ai "Auto ident
 
 " Set font
-set guifont=Monaco:h16
+set guifont=Monaco:h12
 
 " Smart way to move between windows
 map <C-j> <C-W>j
@@ -36,7 +42,9 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " Navigation between files
-nnoremap ,, <c-^>
+nnoremap <Leader><Leader> <c-^>
+nmap <Leader>d :bdelete<cr>
+
 
 " NERDTree biding key
 nnoremap <silent> <F7> :NERDTreeToggle<cr>
@@ -63,6 +71,9 @@ nmap <Leader>v :e $MYVIMRC<CR>
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 nmap <Leader>l :let &list = !&list<CR>
 
+"ignore files
+set wildignore+=*/assets/*,*/node_modules/*,*/test_out/*,*.so,*.swp,*.zip
+
 "AngularJS structure move to test
 function! EditFileIfExists(file)
   if filereadable(a:file)
@@ -72,8 +83,19 @@ function! EditFileIfExists(file)
   endif
 endfunction
 
-nmap <Leader>t :call EditFileIfExists(substitute(substitute(@%, 'app\/js', 'test\/unit', 'g'), '\.js', '-spec.js', 'g'))
+function! SplitVertically()
+  :vsplit
+endfunction
+function! OpenTest()
+  :call EditFileIfExists(substitute(substitute(@%, 'app\/js', 'test\/unit', 'g'), '\.js', '-spec.js', 'g'))
+endfunction
+
+nmap <Leader>t :call OpenTest()<CR>
 nmap <Leader>w :call EditFileIfExists(substitute(substitute(@%, 'test\/unit', 'app\/js', 'g'), '-spec\.js', '.js', 'g'))
+nmap <Leader>T :call SplitVertically()<CR><C-l>:call OpenTest()<CR>
+
+ab pe PETEALL-
+ab si (pleal/
 
 "current work ddp
 "let @d='Oi{j0i	"alimento": "$Da",j0i	"unidade": "$a",j0i	"pontos": "$a"oi},j'
@@ -89,3 +111,6 @@ nmap <Leader>w :call EditFileIfExists(substitute(substitute(@%, 'test\/unit', 'a
 source ~/.dotfiles/vim/vundle.vim 
 
 let g:syntastic_javascript_checkers=['jshint']
+
+nmap <c-B> :CtrlPBuffer<cr>
+

@@ -6,3 +6,7 @@ alias gco='git checkout'
 alias gst='git status'
 alias gsr='git svn rebase'
 alias gsd='git svn dcommit'
+
+function gitchanged() {
+  git log --oneline --grep="$@" --name-only | grep -Eo "\w+/.*\.\w+" | sort -u
+}

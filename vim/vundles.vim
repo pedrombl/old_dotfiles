@@ -1,29 +1,28 @@
-Bundle "scrooloose/nerdtree.git"
-Bundle "scrooloose/nerdcommenter.git"
-Bundle "scrooloose/syntastic"
-Bundle "kien/ctrlp.vim"
-Bundle 'bling/vim-airline'
-Bundle 'mileszs/ack.vim'
-Bundle 'jpalardy/vim-slime'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
-Bundle 'SyntaxRange'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'mhinz/vim-startify'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdcommenter.git'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'bling/vim-airline'
+Plugin 'mileszs/ack.vim'
+Plugin 'jpalardy/vim-slime'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'SyntaxRange'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'mhinz/vim-startify'
 
 
 " for vim-snipmate
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 
 " Languages
-Bundle 'elixir-lang/vim-elixir'
-Bundle "claco/jasmine.vim"
-Bundle 'guns/vim-clojure-static'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'claco/jasmine.vim'
+Plugin 'guns/vim-clojure-static'
 
 "Plugin configurations
-"
 
 map <Leader>e <Plug>(easymotion-prefix)
