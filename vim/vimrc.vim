@@ -22,7 +22,7 @@ set incsearch
 
 " highlight search
 set hlsearch
-map <C-Enter> :nohlsearch <Enter>
+map <Enter> :nohlsearch <Enter>
 
 " Text, tab and ident related
 "set smarttab
@@ -44,6 +44,9 @@ map <C-l> <C-W>l
 " Navigation between files
 nnoremap <Leader><Leader> <c-^>
 nmap <Leader>d :bdelete<cr>
+nnoremap <F5> :buffers<CR>:buffer<Space>
+set hidden
+set confirm
 
 
 " NERDTree biding key

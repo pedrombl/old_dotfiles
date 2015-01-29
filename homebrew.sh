@@ -22,3 +22,4 @@ brew install typespeed
 
 #vim
 brew install vim
+brew install tmux

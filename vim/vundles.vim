@@ -10,6 +10,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'SyntaxRange'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'mhinz/vim-startify'
+Plugin 'vim-scripts/BufOnly.vim'
 
 
 " for vim-snipmate
