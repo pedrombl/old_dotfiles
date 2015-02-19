@@ -23,3 +23,6 @@ brew install typespeed
 #vim
 brew install vim
 brew install tmux
+brew install Leiningen
+brew install fzf
+brew install fasd

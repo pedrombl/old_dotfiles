@@ -10,3 +10,7 @@ alias gsd='git svn dcommit'
 function gitchanged() {
   git log --oneline --grep="$@" --name-only | grep -Eo "\w+/.*\.\w+" | sort -u
 }
+
+tiggrep() {
+  tig --grep="$@" --reverse --oneline
+}
