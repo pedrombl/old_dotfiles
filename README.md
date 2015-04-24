@@ -22,4 +22,6 @@ Included
 * vim
 * svn
 * git
+* foo 
+*
 
