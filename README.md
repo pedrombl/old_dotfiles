@@ -22,6 +22,14 @@ Included
 * vim
 * svn
 * git
-* foo 
 *
 
+Add this to your .bash_profile
+--------
+```
+source ~/.dotfiles/bash/git-completion.bash
+source ~/.dotfiles/bash/git.bash
+source ~/.dotfiles/bash/svn.bash
+source ~/.dotfiles/bash/homebrew.bash
+source ~/.dotfiles/bash/utils.bash
+```
