@@ -23,6 +23,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'claco/jasmine.vim'
 Plugin 'guns/vim-clojure-static'
+Plugin 'tfnico/vim-gradle'
 
 "Plugin configurations
 
