@@ -97,18 +97,6 @@ nmap <Leader>t :call OpenTest()<CR>
 nmap <Leader>w :call EditFileIfExists(substitute(substitute(@%, 'test\/unit', 'app\/js', 'g'), '-spec\.js', '.js', 'g'))
 nmap <Leader>T :call SplitVertically()<CR><C-l>:call OpenTest()<CR>
 
-ab pe PETEALL-
-ab si (pleal/
-
-"current work ddp
-"let @d='Oi{j0i	"alimento": "$Da",j0i	"unidade": "$a",j0i	"pontos": "$a"oi},j'
-"let @p=':%s/	/\r/g:%s/^\s//g'
-"let @i='ggO['
-"let @f='xo]'
-"let @a='@i@pggj50@d@f'
-"let @x='Oi{j0i	"alimento": "$a",j0i	"unidade": "$a",j0i	"pontos": "$a"oi},j'
-"let @z='@i@pggj50@x'
-
 "Vundle
 "to open this file press gf over the file
 source ~/.dotfiles/vim/vundle.vim 

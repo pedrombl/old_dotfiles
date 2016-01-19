@@ -31,7 +31,7 @@ brew install gradle
 brew install ant
 brew install multirust
 brew install curl
-brew install install httpie
+brew install httpie
 brew install beep
 brew install terminal-notifier
 brew install git-crypt
