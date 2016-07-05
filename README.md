@@ -1,7 +1,7 @@
-dotfiles
+old dotfiles
 ========
 
-My dotfiles
+dotfiles
 
 Dependencies
 ------------
